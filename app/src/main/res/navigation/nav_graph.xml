@@ -44,6 +44,9 @@
         <action
             android:id="@+id/action_viewModelsFragment_to_koinModelRepositoryFragment"
             app:destination="@id/koinModelRepositoryFragment" />
+        <action
+            android:id="@+id/action_viewModelsFragment_to_providerStateModelFragment"
+            app:destination="@id/providerStateModelFragment" />
     </fragment>
     <fragment
         android:id="@+id/providerModelFragment"
@@ -73,5 +76,9 @@
         android:id="@+id/koinModelRepositoryFragment"
         android:name="com.test.androidbasics.viewmodel.di_models.koin.with_repository.KoinModelRepositoryFragment"
         android:label="KoinModelRepositoryFragment" />
+    <fragment
+        android:id="@+id/providerStateModelFragment"
+        android:name="com.test.androidbasics.viewmodel.provider.ProviderStateModelFragment"
+        android:label="ProviderStateModelFragment" />
 
 </navigation>

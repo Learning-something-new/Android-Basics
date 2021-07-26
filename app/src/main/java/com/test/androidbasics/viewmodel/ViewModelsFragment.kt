@@ -29,14 +29,17 @@ class ViewModelsFragment: Fragment(R.layout.fragment_recycler) {
     private fun createSectionItems(): List<NavigationSectionItem> {
         return mutableListOf<NavigationSectionItem>().apply {
             this += NavigationSectionItem(
-                "Provider",
-                R.id.action_viewModelsFragment_to_providerModelFragment
-            )
-            this += NavigationSectionItem(
                 "ProviderFactory",
                 R.id.action_viewModelsFragment_to_providerModelFactoryFragment
             )
-
+            this += NavigationSectionItem(
+                "ProviderState",
+                R.id.action_viewModelsFragment_to_providerStateModelFragment
+            )
+            this += NavigationSectionItem(
+                "Provider",
+                R.id.action_viewModelsFragment_to_providerModelFragment
+            )
             this += NavigationSectionItem(
                 "By view models",
                 R.id.action_viewModelsFragment_to_byViewModelsFragment

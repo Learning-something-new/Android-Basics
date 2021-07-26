@@ -14,7 +14,7 @@ import com.test.androidbasics.viewmodel.defaults.DefaultViewModel
 
 class ProviderModelFragment : SimpleFragment() {
 
-    private lateinit var viewModel: DefaultStateViewModel
+    private lateinit var viewModel: DefaultViewModel
 
     override fun setText(text: String) {
         viewModel.setNewText(text)
@@ -24,8 +24,8 @@ class ProviderModelFragment : SimpleFragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        viewModel = ViewModelProvider(this, SavedStateViewModelFactory(requireActivity().application, this)).get(
-            DefaultStateViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(
+            DefaultViewModel::class.java)
 
         bindObservers()
     }
