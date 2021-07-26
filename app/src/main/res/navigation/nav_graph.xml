@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.test.androidbasics.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_recycler">
+        <action
+            android:id="@+id/action_mainFragment_to_viewModelsFragment"
+            app:destination="@id/viewModelsFragment" />
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/viewModelsFragment"
+        android:name="com.test.androidbasics.viewmodel.ViewModelsFragment"
+        android:label="ViewModelsFragment"
+        tools:layout="@layout/fragment_recycler">
+        <action
+            android:id="@+id/action_viewModelsFragment_to_providerModelFragment"
+            app:destination="@id/providerModelFragment" />
+        <action
+            android:id="@+id/action_viewModelsFragment_to_providerModelFactoryFragment"
+            app:destination="@id/providerModelFactoryFragment" />
+        <action
+            android:id="@+id/action_viewModelsFragment_to_byViewModelsFragment"
+            app:destination="@id/byViewModelsFragment" />
+        <action
+            android:id="@+id/action_viewModelsFragment_to_byViewModelsFactoryFragment"
+            app:destination="@id/byViewModelsFactoryFragment" />
+        <action
+            android:id="@+id/action_viewModelsFragment_to_koinModelFragment"
+            app:destination="@id/koinModelFragment" />
+        <action
+            android:id="@+id/action_viewModelsFragment_to_koinModelFactoryFragment"
+            app:destination="@id/koinModelFactoryFragment" />
+        <action
+            android:id="@+id/action_viewModelsFragment_to_koinModelRepositoryFragment"
+            app:destination="@id/koinModelRepositoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/providerModelFragment"
+        android:name="com.test.androidbasics.viewmodel.provider.ProviderModelFragment"
+        android:label="ProviderModelFragment" />
+    <fragment
+        android:id="@+id/providerModelFactoryFragment"
+        android:name="com.test.androidbasics.viewmodel.provider.provider_factory.ProviderModelFactoryFragment"
+        android:label="ProviderModelFactoryFragment" />
+    <fragment
+        android:id="@+id/byViewModelsFragment"
+        android:name="com.test.androidbasics.viewmodel.fragment_ext_by_viewmodels.ByViewModelsFragment"
+        android:label="ByViewModelsFragment" />
+    <fragment
+        android:id="@+id/byViewModelsFactoryFragment"
+        android:name="com.test.androidbasics.viewmodel.fragment_ext_by_viewmodels.with_factory.ByViewModelsFactoryFragment"
+        android:label="ByViewModelsFactoryFragment" />
+    <fragment
+        android:id="@+id/koinModelFragment"
+        android:name="com.test.androidbasics.viewmodel.di_models.koin.KoinModelFragment"
+        android:label="KoinModelFragment" />
+    <fragment
+        android:id="@+id/koinModelFactoryFragment"
+        android:name="com.test.androidbasics.viewmodel.di_models.koin.with_factory.KoinModelFactoryFragment"
+        android:label="KoinModelFactoryFragment" />
+    <fragment
+        android:id="@+id/koinModelRepositoryFragment"
+        android:name="com.test.androidbasics.viewmodel.di_models.koin.with_repository.KoinModelRepositoryFragment"
+        android:label="KoinModelRepositoryFragment" />
+
+</navigation>
