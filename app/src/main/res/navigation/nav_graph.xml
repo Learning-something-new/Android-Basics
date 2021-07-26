@@ -13,9 +13,10 @@
         <action
             android:id="@+id/action_mainFragment_to_viewModelsFragment"
             app:destination="@id/viewModelsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_navigationFragment"
+            app:destination="@id/navigationFragment" />
     </fragment>
-
-
 
 
     <fragment
@@ -80,5 +81,45 @@
         android:id="@+id/providerStateModelFragment"
         android:name="com.test.androidbasics.viewmodel.provider.ProviderStateModelFragment"
         android:label="ProviderStateModelFragment" />
+    <fragment
+        android:id="@+id/navigationFragment"
+        android:name="com.test.androidbasics.navigation.NavigationFragment"
+        android:label="NavigationFragment">
+        <action
+            android:id="@+id/action_navigationFragment_to_navigation"
+            app:destination="@id/nested_navigation_with_one_viewmodel" />
+    </fragment>
+    <navigation
+        android:id="@+id/nested_navigation_with_one_viewmodel"
+        app:startDestination="@id/firstNestedNavigationFragment">
+        <fragment
+            android:id="@+id/firstNestedNavigationFragment"
+            android:name="com.test.androidbasics.navigation.nested_with_one_viewmodel.FirstNestedNavigationFragment"
+            android:label="FirstNestedNavigationFragment">
+            <action
+                android:id="@+id/action_firstNestedNavigationFragment_to_secondNestedNavigationFragment"
+                app:destination="@id/secondNestedNavigationFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/secondNestedNavigationFragment"
+            android:name="com.test.androidbasics.navigation.nested_with_one_viewmodel.SecondNestedNavigationFragment"
+            android:label="SecondNestedNavigationFragment">
+            <action
+                android:id="@+id/action_secondNestedNavigationFragment_to_thirdNestedNavigationFragment"
+                app:destination="@id/thirdNestedNavigationFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/thirdNestedNavigationFragment"
+            android:name="com.test.androidbasics.navigation.nested_with_one_viewmodel.ThirdNestedNavigationFragment"
+            android:label="ThirdNestedNavigationFragment" >
+            <action
+                android:id="@+id/action_thirdNestedNavigationFragment_to_finalNestedNavigationFragment"
+                app:destination="@id/finalNestedNavigationFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/finalNestedNavigationFragment"
+            android:name="com.test.androidbasics.navigation.nested_with_one_viewmodel.FinalNestedNavigationFragment"
+            android:label="FinalNestedNavigationFragment" />
+    </navigation>
 
 </navigation>
