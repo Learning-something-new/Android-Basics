@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id "org.jetbrains.kotlin.kapt"
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -64,5 +66,12 @@ dependencies {
     implementation "io.insert-koin:koin-android:$koin_version"
 
 
+    // hilt
+    implementation 'com.google.dagger:hilt-android:2.38'
+    kapt 'com.google.dagger:hilt-compiler:2.38'
 
+}
+
+kapt {
+    correctErrorTypes true
 }

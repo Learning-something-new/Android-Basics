@@ -48,6 +48,12 @@
         <action
             android:id="@+id/action_viewModelsFragment_to_providerStateModelFragment"
             app:destination="@id/providerStateModelFragment" />
+        <action
+            android:id="@+id/action_viewModelsFragment_to_hiltModelFragment"
+            app:destination="@id/hiltModelFragment" />
+        <action
+            android:id="@+id/action_viewModelsFragment_to_hiltModelRepositoryFragment"
+            app:destination="@id/hiltModelRepositoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/providerModelFragment"
@@ -121,5 +127,13 @@
             android:name="com.test.androidbasics.navigation.nested_with_one_viewmodel.FinalNestedNavigationFragment"
             android:label="FinalNestedNavigationFragment" />
     </navigation>
+    <fragment
+        android:id="@+id/hiltModelFragment"
+        android:name="com.test.androidbasics.viewmodel.di_models.hilt.HiltModelFragment"
+        android:label="HiltModelFragment" />
+    <fragment
+        android:id="@+id/hiltModelRepositoryFragment"
+        android:name="com.test.androidbasics.viewmodel.di_models.hilt.with_repository.HiltModelRepositoryFragment"
+        android:label="HiltModelRepositoryFragment" />
 
 </navigation>

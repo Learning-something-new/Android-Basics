@@ -1,7 +1,7 @@
 package com.test.androidbasics.simple.repository
 
 
-class SimpleRepositoryImpl : SimpleRepository {
+open class SimpleRepositoryImpl : SimpleRepository {
     override val text: String = "SimpleRepository text"
 
 }

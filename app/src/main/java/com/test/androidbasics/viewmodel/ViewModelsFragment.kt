@@ -61,6 +61,15 @@ class ViewModelsFragment: Fragment(R.layout.fragment_recycler) {
                 "Koin DI repository",
                 R.id.action_viewModelsFragment_to_koinModelRepositoryFragment
             )
+
+            this += NavigationSectionItem(
+                "Hilt DI",
+                R.id.action_viewModelsFragment_to_hiltModelFragment
+            )
+            this += NavigationSectionItem(
+                "Hilt DI repository",
+                R.id.action_viewModelsFragment_to_hiltModelRepositoryFragment
+            )
         }
     }
 

@@ -4,8 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.test.androidbasics.simple.repository.SimpleRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class DefaultRepositoryViewModel(
+@HiltViewModel
+class DefaultRepositoryViewModel @Inject constructor(
     simplerRepository: SimpleRepository
 ) : ViewModel() {
     private val _text = MutableLiveData(simplerRepository.text)
